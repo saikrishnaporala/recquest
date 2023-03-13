@@ -1,0 +1,5 @@
+import 'package:get/get.dart';
+
+class PersonalInformationModel {
+  Rx<String> dob = Rx("msg_date_of_birth".tr);
+}

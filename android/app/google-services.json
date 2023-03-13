@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "30657377400",
+    "project_id": "recquest-live-9e24c",
+    "storage_bucket": "recquest-live-9e24c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30657377400:android:e47cb19afcdc242e6fe98d",
+        "android_client_info": {
+          "package_name": "com.recquest.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30657377400-2k5q53a5gm4gvhe09el679mk5rlqj343.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.recquest.app",
+            "certificate_hash": "1206b61f2b754dc265c36123c45070387928424f"
+          }
+        },
+        {
+          "client_id": "30657377400-8v0b75gl863dgs8st1adqe911tvb9a5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJdBU12vX9SbIz2kTOtWRnwBmNn08ritw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30657377400-785rbcl1b2o5l2b2toaujcd4vhv3v60j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "30657377400-jbtsi7stkdf0r5mn1dghupgjni1b2jnd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.recquest.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

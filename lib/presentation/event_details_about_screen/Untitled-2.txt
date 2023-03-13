@@ -1,0 +1,170 @@
+child: Obx(
+              () => GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisSpacing: 0,
+                  mainAxisSpacing: 0,
+                  crossAxisCount: 3,
+                ),
+                itemCount: controller.items.length,
+                itemBuilder: (context, index) {
+                  return new GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RouteTwo(
+                              image: controller.items[index].image,
+                              name: controller.items[index].name),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: FileImage(File(controller.items[index].image)),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ))
+
+
+            class RouteTwo extends StatelessWidget {
+  final String image;
+  final String name;
+
+  RouteTwo({Key? key, required this.image, required this.name})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Screen two ✌️'),
+      ),
+      body: Column(
+        children: [
+          AspectRatio(
+            aspectRatio: 1,
+            child: Container(
+              width: double.infinity,
+              child: Image(
+                image: NetworkImage(image),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.all(20.0),
+            child: Center(
+              child: Text(
+                name,
+                style: TextStyle(fontSize: 40),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+// Container(
+                                //   // child: Center(
+                                //   child: Padding(
+                                //     padding: getPadding(top: 0),
+                                //     child: Row(
+                                //       // mainAxisAlignment:
+                                //       //     MainAxisAlignment.center,
+                                //       children: [
+                                //         CustomImageView(
+                                //             imagePath: ImageConstant
+                                //                 .imgRectangle8,
+                                //             height:
+                                //                 getVerticalSize(114.00),
+                                //             width: getHorizontalSize(
+                                //                 200.00),
+                                //             onTap: () {
+                                //               onTapImgRectangleEight();
+                                //             }),
+                                //         CustomImageView(
+                                //             imagePath: ImageConstant
+                                //                 .imgRectangle6,
+                                //             height:
+                                //                 getVerticalSize(114.00),
+                                //             width: getHorizontalSize(
+                                //                 138.00),
+                                //             margin: getMargin(left: 11),
+                                //             onTap: () {
+                                //               onTapImgRectangleSix();
+                                //             })
+                                //       ],
+                                //     ),
+                                //   ),
+                                //   // CustomImageView(
+                                //   //     imagePath: ImageConstant.imgRectangle9,
+                                //   //     height: getVerticalSize(171.00),
+                                //   //     width: getHorizontalSize(350.00),
+                                //   //     margin: getMargin(top: 10),
+                                //   //     onTap: () {
+                                //   //       onTapImgRectangleNine();
+                                //   //     }),
+                                //   // Padding(
+                                //   //     padding: getPadding(top: 10),
+                                //   //     child: Row(
+                                //   //         mainAxisAlignment:
+                                //   //             MainAxisAlignment.center,
+                                //   //         children: [
+                                //   //           CustomImageView(
+                                //   //               imagePath:
+                                //   //                   ImageConstant.imgRectangle7,
+                                //   //               height: getVerticalSize(144.00),
+                                //   //               width: getHorizontalSize(138.00),
+                                //   //               onTap: () {
+                                //   //                 onTapImgRectangleSeven();
+                                //   //               }),
+                                //   //           CustomImageView(
+                                //   //               imagePath:
+                                //   //                   ImageConstant.imgRectangle5,
+                                //   //               height: getVerticalSize(144.00),
+                                //   //               width: getHorizontalSize(200.00),
+                                //   //               margin: getMargin(left: 11),
+                                //   //               onTap: () {
+                                //   //                 onTapImgRectangleFive();
+                                //   //               })
+                                //   //         ],),),
+                                //   // Padding(
+                                //   // padding: getPadding(top: 10),
+                                //   // child: Obx(() =>
+                                //   //     StaggeredGridView.countBuilder(
+                                //   //         shrinkWrap: true,
+                                //   //         primary: false,
+                                //   //         crossAxisCount: 4,
+                                //   //         crossAxisSpacing:
+                                //   //             getHorizontalSize(11.78),
+                                //   //         mainAxisSpacing:
+                                //   //             getHorizontalSize(11.78),
+                                //   //         staggeredTileBuilder: (index) {
+                                //   //           return StaggeredTile.fit(2);
+                                //   //         },
+                                //   //         itemCount: controller
+                                //   //             .eventDetailsImagesModelObj
+                                //   //             .value
+                                //   //             .staggeredrectangleItemList
+                                //   //             .length,
+                                //   //         itemBuilder: (context, index) {
+                                //   //           StaggeredrectangleItemModel
+                                //   //               model = controller
+                                //   //                   .eventDetailsImagesModelObj
+                                //   //                   .value
+                                //   //                   .staggeredrectangleItemList[index];
+                                //   //           return StaggeredrectangleItemWidget(
+                                //   //               model,
+                                //   //               onTapImgRectangle:
+                                //   //                   onTapImgRectangle);
+                                //   //         },),),),
+                                //   // ),
+                                // ),
